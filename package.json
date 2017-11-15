@@ -1,0 +1,25 @@
+{
+  "name": "ohyes-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build:generate-types": "pulp run -m GenerateTypes",
+    "build:main": "pulp build -O --to src/main.js --skip-entry-point --main Main && echo module.exports = PS.Main >> src/main.js",
+    "build:tsc": "tsc",
+    "build": "npm run build:generate-types && npm run build:main && npm run build:tsc",
+    "start": "npm run build && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^2.6.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.8.2"
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "ohyes-demo",
+    "set": "bingsu",
+    "source": "https://github.com/justinwoo/package-sets.git",
+    "depends": [
+        "node-fs-aff",
+        "prettier",
+        "ohyes",
+        "psci-support",
+        "console",
+        "eff",
+        "prelude"
+    ]
+}
